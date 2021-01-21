@@ -2,25 +2,11 @@
 <search>
   <entry>
     <title><![CDATA[PAT 1031 Hello World for U]]></title>
-    <url>%2F2021%2F01%2F21%2Farticle-title%2F</url>
-    <content type="text"><![CDATA[题目链接：1031 Hello World for U 题目大致思路： 先理解题目中给出的限制条件 $$n_1 = n_3 = max{k|k \leq n_2 \ for\ all\ 3 \leq n_2 \leq N} \with\ n_1 + n_2 + n_3 - 2 = N$$ 意思就是U形图形两侧字符数n1与n3总是不超过底部字符数n2且在这个条件下尽可能使两侧字符数字n1达到最大 所以我们可以通过n2的值来获取n1和n3的最大值。 计算出n1，n2, n3的值之后我们可以按照题目的要求来进行模拟，先输出n1 和n3对应的字符在输出n2对应的字符。注意U形字母之间的空格为n2 - 2。 具体代码 123456789101112131415161718192021222324252627#include &lt;bits/stdc++.h&gt;using namespace std;int main() &#123; string str; cin &gt;&gt; str; int n1 = 0 ,n2, n3 = 0; int N = str.size(); for(n2 = 3; n2 &lt;= N; n2 ++) &#123; int tmp = (N - n2 + 2); if(tmp % 2 == 0 &amp;&amp; tmp / 2 &gt; n1 &amp;&amp; n2 * 2 &gt;= tmp) &#123; n1 = tmp / 2; break; &#125; &#125; n1--; int i; for(i = 0; i &lt; n1; i++) &#123; cout &lt;&lt; str[i]; for(int j = 0; j &lt; n2 - 2; j++) cout &lt;&lt; " "; cout &lt;&lt; str[N - i - 1] &lt;&lt; endl; &#125; while(n2--) cout &lt;&lt; str[i++]; cout &lt;&lt; endl; return 0;&#125;]]></content>
-      <tags>
-        <tag>pat</tag>
-        <tag>算法刷题 - 模拟</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title><![CDATA[PAT 1031 Hello World for U]]></title>
     <url>%2F2021%2F01%2F21%2Fpat%201031%20Hello%20World%20for%20U%2F</url>
     <content type="text"><![CDATA[题目链接：1031 Hello World for U 题目大致思路： 先理解题目中给出的限制条件 $$n_1 = n_3 = max{k|k \leq n_2 \ for\ all\ 3 \leq n_2 \leq N} \with\ n_1 + n_2 + n_3 - 2 = N$$ 意思就是U形图形两侧字符数n1与n3总是不超过底部字符数n2且在这个条件下尽可能使两侧字符数字n1达到最大 所以我们可以通过n2的值来获取n1和n3的最大值。 计算出n1，n2, n3的值之后我们可以按照题目的要求来进行模拟，先输出n1 和n3对应的字符在输出n2对应的字符。注意U形字母之间的空格为n2 - 2。 具体代码 123456789101112131415161718192021222324252627#include &lt;bits/stdc++.h&gt;using namespace std;int main() &#123; string str; cin &gt;&gt; str; int n1 = 0 ,n2, n3 = 0; int N = str.size(); for(n2 = 3; n2 &lt;= N; n2 ++) &#123; int tmp = (N - n2 + 2); if(tmp % 2 == 0 &amp;&amp; tmp / 2 &gt; n1 &amp;&amp; n2 * 2 &gt;= tmp) &#123; n1 = tmp / 2; break; &#125; &#125; n1--; int i; for(i = 0; i &lt; n1; i++) &#123; cout &lt;&lt; str[i]; for(int j = 0; j &lt; n2 - 2; j++) cout &lt;&lt; " "; cout &lt;&lt; str[N - i - 1] &lt;&lt; endl; &#125; while(n2--) cout &lt;&lt; str[i++]; cout &lt;&lt; endl; return 0;&#125;]]></content>
       <tags>
         <tag>pat</tag>
         <tag>算法刷题 - 模拟</tag>
       </tags>
-  </entry>
-  <entry>
-    <title><![CDATA[Hello World]]></title>
-    <url>%2F2019%2F08%2F05%2Fhello-world%2F</url>
-    <content type="text"><![CDATA[Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick StartCreate a new post1$ hexo new "My New Post" More info: Writing Run server1$ hexo server More info: Server Generate static files1$ hexo generate More info: Generating Deploy to remote sites1$ hexo deploy More info: Deployment]]></content>
   </entry>
 </search>
